@@ -9,21 +9,17 @@
 # - gb-start-ssh-agent : Starts ssh-agent
 # - gb-stop-ssh-agent  : Stops ssh-agent and unsets its variables
 # - gb-add-ssh-keys    : Adds your private keys to ssh-agent (CONFIGURE IT!)
-#
-# Following aliases will execute a chain of commands above:
-# - gb-start : Starts ssh-agent, adds private keys and changes the prompt
-# - gb-stop  : Stops ssh-agent and restores the prompt
+# - gb-start           : gb-start-ssh-agent gb-add-ssh-keys gb-change-prompt
+# - gb-stop            : gb-stop-ssh-agent gb-restore-prompt
 
 # $PS1_ORIGINAL is used to store the original prompt
 export PS1_ORIGINAL=$PS1
 
 # gb-change-prompt
-# Append (Git) prefix to the original prompt if ssh-agent is running
+# Append (Git) prefix to the original prompt
 function gb-change-prompt()
 {
-	if [ -n "$SSH_AGENT_PID" ]; then
-		PS1="(Git) $PS1_ORIGINAL"
-	fi
+	PS1="(Git) $PS1_ORIGINAL"
 }
 
 # gb-restore-prompt
@@ -65,8 +61,17 @@ function gb-add-ssh-keys()
 
 # gb-start
 # Run commands to start ssh-agent, add private keys and change the prompt
-alias gb-start='gb-start-ssh-agent && gb-add-ssh-keys && gb-change-prompt'
+function gb-start()
+{
+	gb-start-ssh-agent
+	gb-add-ssh-keys
+	gb-change-prompt
+}
 
 # gb-stop
 # Run commands to stop ssh-agent and restore the prompt
-alias gb-stop='gb-stop-ssh-agent && gb-restore-prompt'
+function gb-stop()
+{
+	gb-stop-ssh-agent
+	gb-restore-prompt
+}
