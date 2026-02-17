@@ -1,0 +1,12 @@
+[user]
+	name = Naveandice
+	email = 84022504+Naveandice@users.noreply.github.com
+	signingkey = # Due to privacy reasons, this option is unset.
+[core]
+	editor = vim.gtk3
+[init]
+	defaultBranch = main
+[gpg]
+	format = ssh
+[alias]
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
