@@ -34,7 +34,7 @@ function gb-restore-prompt()
 function gb-start-ssh-agent()
 {
 	if [ -z "$SSH_AGENT_PID" ]; then
-		eval "$(ssh-agent -s > /dev/null)"
+		eval "$(ssh-agent -s)"
 	fi
 }
 
@@ -43,7 +43,7 @@ function gb-start-ssh-agent()
 function gb-stop-ssh-agent()
 {
 	if [ -n "$SSH_AGENT_PID" ]; then
-		ssh-agent -k > /dev/null
+		ssh-agent -k
 	fi
 	unset SSH_AGENT_PID SSH_AUTH_SOCK
 }
@@ -55,7 +55,7 @@ function gb-add-ssh-keys()
 	# Due to privacy reasons, this function is not configured.
 	# You must edit the ssh-add line to use your own private keys.
 	# After doing so, you can comment out or completely remove the echo line.
-	#ssh-add $HOME/.ssh/<private_keys> &> /dev/null
+	#ssh-add $HOME/.ssh/<private_keys>
 	echo -e "\e[0;33mWARN: gb-add-ssh-keys is not configured\e[0m"
 }
 
