@@ -1,0 +1,15 @@
+[user]
+	name = your-name-here
+	email = [email protected]
+
+[core]
+	editor = vim.gtk3
+
+[init]
+	defaultBranch = main
+
+[gpg]
+	format = ssh
+
+[includeIf "gitdir:~/Development/github/"]
+	path = ~/.config/git/include/github

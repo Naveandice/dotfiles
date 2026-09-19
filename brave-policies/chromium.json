@@ -1,0 +1,30 @@
+{
+  "AutofillAddressEnabled": false,
+  "AutofillCreditCardEnabled": false,
+  "BackgroundModeEnabled": false,
+  "BlockThirdPartyCookies": true,
+  "BrowserSignin": 0,
+  "ClearBrowsingDataOnExitList": [
+    "browsing_history",
+    "download_history",
+    "cached_images_and_files",
+    "password_signin",
+    "autofill",
+    "hosted_app_data"
+  ],
+  "DnsOverHttpsMode": "secure",
+  "DnsOverHttpsTemplates": "https://cloudflare-dns.com/dns-query",
+  "GeminiSettings": 1,
+  "GenAiDefaultSettings": 2,
+  "GenAILocalFoundationalModelSettings": 1,
+  "MediaRecommendationsEnabled": false,
+  "MetricsReportingEnabled": false,
+  "PasswordLeakDetectionEnabled": false,
+  "PasswordManagerEnabled": false,
+  "PasswordSharingEnabled": false,
+  "PaymentMethodQueryEnabled": false,
+  "PrivacySandboxPromptEnabled": false,
+  "SafeBrowsingExtendedReportingEnabled": false,
+  "SafeBrowsingProtectionLevel": 1,
+  "SafeBrowsingSurveysEnabled": false
+}
