@@ -32,7 +32,7 @@ if [ "$color_prompt" == "yes" ]; then
 else
 	PS1='${debian_chroot:+($debian_chroot) }[\@] [\u@\h \W]${PS1_CMD1}\n\$ '
 fi
-unset color_prompt force_color_prompt
+unset color_prompt
 
 case "$TERM" in
 	xterm*|rxvt*)
