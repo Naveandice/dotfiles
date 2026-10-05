@@ -2,21 +2,18 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
     "type": "chafa",
-    "source": "/path/to/image.png",
+    "source": "~/Pictures/fastfetch.png",
     "width": 24,
     "padding": {
-      "top": 2,
-      "left": 2
+      "top": 1,
+      "left": 2,
+      "right": 2
     }
   },
   "modules": [
     "title",
     "separator",
     "os",
-    {
-      "type": "host",
-      "format": "{/2}{-}{/}{2}{?3} {3}{?}"
-    },
     "kernel",
     "uptime",
     {
@@ -34,6 +31,7 @@
       "key": "GPU"
     },
     "memory",
+    "disk",
     "break",
     "colors"
   ]
